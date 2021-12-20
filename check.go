@@ -76,7 +76,7 @@ func match(tld, resp string) (available bool) {
 	fp := fingerprints()
 
 	// .ca & .lt have opposite fingerprints
-	if tld == "ca" || tld == "lt" {
+	if tld == "lt" {
 		if !strings.Contains(resp, fp[tld]) {
 			available = true
 		}
